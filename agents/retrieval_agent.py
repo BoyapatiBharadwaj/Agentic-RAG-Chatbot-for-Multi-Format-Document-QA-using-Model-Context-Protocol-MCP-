@@ -1,18 +1,16 @@
 # agents/retrieval_agent.py
 
-from dotenv import load_dotenv
-load_dotenv()
-
-import os
-import sys
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
+
+self.embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
 
 class RetrievalAgent:
     def __init__(self):
         self.vectorstore = None
-        self.embedding_model = OpenAIEmbeddings()
+        self.embedding_model = HuggingFaceEmbeddings()
 
     def build_vectorstore(self, documents):
         text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
