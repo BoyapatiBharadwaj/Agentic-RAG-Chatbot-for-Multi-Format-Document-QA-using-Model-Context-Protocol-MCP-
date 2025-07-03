@@ -3,6 +3,11 @@
 import streamlit as st
 import tempfile
 import os
+import sys
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 from agents.ingestion_agent import IngestionAgent
 from agents.retrieval_agent import RetrievalAgent
