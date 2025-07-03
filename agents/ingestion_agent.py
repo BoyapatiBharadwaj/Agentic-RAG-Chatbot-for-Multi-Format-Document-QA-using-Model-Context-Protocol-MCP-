@@ -1,3 +1,6 @@
+
+import os 
+
 class IngestionAgent:
     def __init__(self):
         self.supported_types = ['pdf', 'csv', 'docx', 'pptx', 'txt', 'md']

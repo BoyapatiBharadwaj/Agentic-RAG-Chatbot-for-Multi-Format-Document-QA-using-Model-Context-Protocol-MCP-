@@ -1,5 +1,10 @@
 # agents/retrieval_agent.py
 
+from dotenv import load_dotenv
+load_dotenv()
+
+import os
+import sys
 from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
