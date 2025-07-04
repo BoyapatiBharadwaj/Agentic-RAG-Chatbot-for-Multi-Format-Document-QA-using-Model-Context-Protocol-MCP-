@@ -4,7 +4,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain_community.chat_models import ChatOllama
 
 class LLMResponseAgent:
-    def __init__(self, model_name="llama3"):
+    def __init__(self, model_name="llama2:7b"):
         self.llm = ChatOllama(model=model_name)
 
     def generate_answer(self, query, retrieved_docs):
